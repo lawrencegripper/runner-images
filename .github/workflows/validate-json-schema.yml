@@ -1,0 +1,16 @@
+name: Validate JSON Schema
+
+on: [push, pull_request]
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run JSON Schema validation
+        run: |
+          wget -q https://github.com/neilpa/yajsv/releases/download/v1.4.1/yajsv.linux.amd64
+          chmod +x yajsv.linux.amd64
+          ./yajsv.linux.amd64 -s ./schemas/toolset-schema.json $(find . -name 'toolset-*.json' | tr '\n' ' ') 
