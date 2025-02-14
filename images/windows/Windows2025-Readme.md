@@ -1,44 +1,42 @@
 | Announcements |
 |-|
-| [[Windows ] Breaking change : PHP 8.3.* version will be updated to PHP 8.4.* from January 31,2025](https://github.com/actions/runner-images/issues/11256) |
+| [[Windows] Removal of Azure and Azure Powershell module from windows images from 2025-03-01](https://github.com/actions/runner-images/issues/11483) |
 | [Windows Server 2025 is now available](https://github.com/actions/runner-images/issues/11228) |
-| [[Windows] Breaking change : Docker Engine Version 26.* will be updated  to Docker Engine Version 27.*   from February 07,2025](https://github.com/actions/runner-images/issues/11104) |
-| [[Windows & Ubuntu] Breaking change : Maven 3.8.* version will be updated to  Maven 3.9.*  from January 17,2025](https://github.com/actions/runner-images/issues/11093) |
-| [[Windows & Ubuntu] .NET 7.x will be removed from the images on January 17,2025](https://github.com/actions/runner-images/issues/10894) |
+| [[Windows] Breaking change : Docker Engine Version 26.* will be updated  to Docker Engine Version 27.*   from 2025-03-07](https://github.com/actions/runner-images/issues/11104) |
 ***
 # Windows Server 2025
 - OS Version: 10.0.26100 Build 2894
-- Image Version: 20250120.2.0
+- Image Version: 20250209.1.0
 
 ## Windows features
 - Windows Subsystem for Linux (WSLv1): Enabled
-- Windows Subsystem for Linux (Default, WSLv2): 2.3.26.0
+- Windows Subsystem for Linux (Default, WSLv2): 2.4.10.0
 
 ## Installed Software
 
 ### Language and Runtime
 - Bash 5.2.37(1)-release
-- Go 1.23.4
+- Go 1.23.6
 - Julia 1.10.5
-- Kotlin 2.1.0
+- Kotlin 2.1.10
 - LLVM 19.1.5
-- Node 22.13.0
+- Node 22.13.1
 - Perl 5.40.0
-- PHP 8.3.16
+- PHP 8.4.3
 - Python 3.9.13
 - Ruby 3.3.7
 
 ### Package Management
-- Chocolatey 2.4.1
-- Composer 2.8.4
+- Chocolatey 2.4.2
+- Composer 2.8.5
 - Helm 3.16.4
-- Miniconda 24.11.1 (pre-installed on the image but not added to PATH)
+- Miniconda 25.1.1 (pre-installed on the image but not added to PATH)
 - NPM 10.9.2
 - NuGet 6.12.2.1
-- pip 24.3.1 (python 3.9)
+- pip 25.0.1 (python 3.9)
 - Pipx 1.7.1
 - RubyGems 3.5.22
-- Vcpkg (build from commit cf035d991)
+- Vcpkg (build from commit 74ec888e38)
 - Yarn 1.22.22
 
 #### Environment variables
@@ -56,12 +54,12 @@
 ### Tools
 - 7zip 24.09
 - aria2 1.37.0
-- azcopy 10.27.1
+- azcopy 10.28.0
 - Bazel 8.0.1
 - Bazelisk 1.25.0
-- Bicep 0.32.4
+- Bicep 0.33.13
 - Cabal 3.14.1.1
-- CMake 3.31.4
+- CMake 3.31.5
 - CodeQL Action Bundle 2.20.1
 - Docker 26.1.3
 - Docker Compose v2 2.27.1
@@ -78,8 +76,8 @@
 - GNU Binutils 2.43
 - Newman 6.2.1
 - OpenSSL 3.4.0
-- Packer 1.11.2
-- Pulumi 3.146.0
+- Packer 1.12.0
+- Pulumi 3.149.0
 - R 4.4.2
 - Service Fabric SDK 10.1.2493.9590
 - Stack 3.3.1
@@ -91,17 +89,17 @@
 - zstd 1.5.6
 
 ### CLI Tools
-- AWS CLI 2.23.2
-- AWS SAM CLI 1.132.0
-- AWS Session Manager CLI 1.2.694.0
+- AWS CLI 2.24.0
+- AWS SAM CLI 1.133.0
+- AWS Session Manager CLI 1.2.707.0
 - Azure CLI 2.68.0
 - Azure DevOps CLI extension 1.0.1
-- GitHub CLI 2.65.0
+- GitHub CLI 2.66.1
 
 ### Rust Tools
-- Cargo 1.84.0
-- Rust 1.84.0
-- Rustdoc 1.84.0
+- Cargo 1.84.1
+- Rust 1.84.1
+- Rustdoc 1.84.1
 - Rustup 1.27.1
 
 #### Packages
@@ -109,11 +107,11 @@
 - Rustfmt 1.8.0
 
 ### Browsers and Drivers
-- Google Chrome 132.0.6834.84
-- Chrome Driver 132.0.6834.83
-- Microsoft Edge 132.0.2957.115
-- Microsoft Edge Driver 132.0.2957.115
-- Mozilla Firefox 134.0.1
+- Google Chrome 133.0.6943.60
+- Chrome Driver 133.0.6943.53
+- Microsoft Edge 132.0.2957.140
+- Microsoft Edge Driver 132.0.2957.140
+- Mozilla Firefox 135.0
 - Gecko Driver 0.35.0
 - IE Driver 4.14.0.0
 - Selenium server 4.28.0
@@ -127,12 +125,12 @@
 | SELENIUM_JAR_PATH | C:\selenium\selenium-server.jar    |
 
 ### Java
-| Version              | Environment Variable |
-| -------------------- | -------------------- |
-| 8.0.432+6            | JAVA_HOME_8_X64      |
-| 11.0.25+9            | JAVA_HOME_11_X64     |
-| 17.0.13+11 (default) | JAVA_HOME_17_X64     |
-| 21.0.5+11.0          | JAVA_HOME_21_X64     |
+| Version             | Environment Variable |
+| ------------------- | -------------------- |
+| 8.0.442+6           | JAVA_HOME_8_X64      |
+| 11.0.26+4           | JAVA_HOME_11_X64     |
+| 17.0.14+7 (default) | JAVA_HOME_17_X64     |
+| 21.0.6+7.0          | JAVA_HOME_21_X64     |
 
 ### Shells
 | Name          | Target                            |
@@ -155,28 +153,28 @@ Note: MSYS2 is pre-installed on image but not added to PATH.
 
 #### Go
 - 1.21.13
-- 1.22.10
-- 1.23.4
+- 1.22.12
+- 1.23.6
 
 #### Node.js
-- 18.20.5
-- 20.18.1
-- 22.13.0
+- 18.20.6
+- 20.18.2
+- 22.13.1
 
 #### Python
 - 3.9.13
 - 3.10.11
 - 3.11.9
-- 3.12.8
-- 3.13.1
+- 3.12.9
+- 3.13.2
 
 #### PyPy
 - 3.9.19 [PyPy 7.3.16]
-- 3.10.14 [PyPy 7.3.17]
+- 3.10.16 [PyPy 7.3.18]
 
 #### Ruby
 - 3.1.6
-- 3.2.6
+- 3.2.7
 - 3.3.7
 
 ### Databases
@@ -201,16 +199,16 @@ Note: MSYS2 is pre-installed on image but not added to PATH.
 ### Database tools
 - Azure CosmosDb Emulator 2.14.21.0
 - DacFx 162.5.57.1
-- MySQL 8.0.40.0
+- MySQL 8.0.41.0
 - SQL OLEDB Driver 18.7.4.0
 - SQLPS 1.0
-- MongoDB Shell (mongosh) 2.3.8
+- MongoDB Shell (mongosh) 2.3.9
 
 ### Web Servers
 | Name   | Version | ConfigFile                            | ServiceName | ServiceStatus | ListenPort |
 | ------ | ------- | ------------------------------------- | ----------- | ------------- | ---------- |
 | Apache | 2.4.55  | C:\tools\Apache24\conf\httpd.conf     | Apache      | Stopped       | 80         |
-| Nginx  | 1.27.3  | C:\tools\nginx-1.27.3\conf\nginx.conf | nginx       | Stopped       | 80         |
+| Nginx  | 1.27.4  | C:\tools\nginx-1.27.4\conf\nginx.conf | nginx       | Stopped       | 80         |
 
 ### Visual Studio Enterprise 2022
 | Name                          | Version         | Path                                                     |
@@ -478,11 +476,11 @@ Note: MSYS2 is pre-installed on image but not added to PATH.
 - nbgv 3.7.115+d31f50f4d1
 
 ### PowerShell Tools
-- PowerShell 7.4.6
+- PowerShell 7.4.7
 
 #### Powershell Modules
 - Az: 12.4.0
-- AWSPowershell: 4.1.739
+- AWSPowershell: 4.1.753
 - DockerMsftProvider: 1.0.0.8
 - MarkdownPS: 1.10
 - Microsoft.Graph: 2.25.0
